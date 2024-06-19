@@ -1,0 +1,299 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{131D7EB2-BA2A-4C8C-BD02-16504F0BDDE0}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>ShopApp.WinClient</RootNamespace>
+    <AssemblyName>ShopApp.WinClient</AssemblyName>
+    <TargetFrameworkVersion>v4.8.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseWinFormsOutOfProcDesigner>False</UseWinFormsOutOfProcDesigner>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseWinFormsOutOfProcDesigner>False</UseWinFormsOutOfProcDesigner>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="StructureMap, Version=4.7.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\StructureMap.4.7.1\lib\net45\StructureMap.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Helpers\ConfigurationTools.cs" />
+    <Compile Include="IoC\TypesRegistry.cs" />
+    <Compile Include="Models\FinancialYearModel.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Test.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Test.Designer.cs">
+      <DependentUpon>Test.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Corps\Editor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Corps\Editor.Designer.cs">
+      <DependentUpon>Editor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Corps\List.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Corps\List.Designer.cs">
+      <DependentUpon>List.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\FinancialYears\Editor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\FinancialYears\Editor.Designer.cs">
+      <DependentUpon>Editor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\FinancialYears\List.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\FinancialYears\List.Designer.cs">
+      <DependentUpon>List.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Inventories\Editor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Inventories\Editor.Designer.cs">
+      <DependentUpon>Editor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Inventories\List.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Inventories\List.Designer.cs">
+      <DependentUpon>List.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\InventoryInsTypes\Editor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\InventoryInsTypes\Editor.Designer.cs">
+      <DependentUpon>Editor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\InventoryInsTypes\List.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\InventoryInsTypes\List.Designer.cs">
+      <DependentUpon>List.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\InventoryIns\Editor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\InventoryIns\Editor.Designer.cs">
+      <DependentUpon>Editor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\InventoryIns\List.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\InventoryIns\List.Designer.cs">
+      <DependentUpon>List.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ProductCategories\Editor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\ProductCategories\Editor.Designer.cs">
+      <DependentUpon>Editor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ProductCategories\List.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\ProductCategories\List.Designer.cs">
+      <DependentUpon>List.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ProductCategories\ParameterEditor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\ProductCategories\ParameterEditor.Designer.cs">
+      <DependentUpon>ParameterEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ProductCategories\Parameters.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\ProductCategories\Parameters.Designer.cs">
+      <DependentUpon>Parameters.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Products\Editor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Products\Editor.Designer.cs">
+      <DependentUpon>Editor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Products\List.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Products\List.Designer.cs">
+      <DependentUpon>List.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ProductUnits\Editor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\ProductUnits\Editor.Designer.cs">
+      <DependentUpon>Editor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ProductUnits\List.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\ProductUnits\List.Designer.cs">
+      <DependentUpon>List.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SystemForms\CorporationEditorForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\SystemForms\CorporationEditorForm.Designer.cs">
+      <DependentUpon>CorporationEditorForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SystemForms\DbConnectionSettingForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\SystemForms\DbConnectionSettingForm.Designer.cs">
+      <DependentUpon>DbConnectionSettingForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SystemForms\FinancialYearEditorForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\SystemForms\FinancialYearEditorForm.Designer.cs">
+      <DependentUpon>FinancialYearEditorForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SystemForms\SplashScreenForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\SystemForms\SplashScreenForm.Designer.cs">
+      <DependentUpon>SplashScreenForm.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Test.resx">
+      <DependentUpon>Test.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\InventoryIns\Editor.resx">
+      <DependentUpon>Editor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\SystemForms\CorporationEditorForm.resx">
+      <DependentUpon>CorporationEditorForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\SystemForms\DbConnectionSettingForm.resx">
+      <DependentUpon>DbConnectionSettingForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\SystemForms\FinancialYearEditorForm.resx">
+      <DependentUpon>FinancialYearEditorForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\SystemForms\SplashScreenForm.resx">
+      <DependentUpon>SplashScreenForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ShopApp.DataLayer\ShopApp.DataLayer.csproj">
+      <Project>{6582b36a-554f-46fc-825c-f2aab9df1d54}</Project>
+      <Name>ShopApp.DataLayer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ShopApp.Entities\ShopApp.Entities.csproj">
+      <Project>{4e88a75c-a110-4184-9579-305878dafd9c}</Project>
+      <Name>ShopApp.Entities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ShopApp.Framework\ShopApp.Framework.csproj">
+      <Project>{a9cf354c-0545-4e53-a324-806a35b1ed13}</Project>
+      <Name>ShopApp.Framework</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ShopApp.Repositories\ShopApp.Repositories.csproj">
+      <Project>{91f12549-a20c-4c6e-877d-2b42cce7ebe2}</Project>
+      <Name>ShopApp.Repositories</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ShopApp.RepositoryAbstracts\ShopApp.RepositoryAbstracts.csproj">
+      <Project>{6cd8c3ee-26f6-455f-9f60-9e267a54ad29}</Project>
+      <Name>ShopApp.RepositoryAbstracts</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\macos-big-sur-wallpaper-10.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1655320786_black-red-back.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\white-background5.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\white-background6.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\windows-11-3840x2160-bliss-microsoft-windows-xp-4k-23533.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\%40Wallpaper_4K3D %289409%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Windows 11 Wallpaper 28.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Windows 11 Wallpaper 29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ShopdbScript.sql" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
